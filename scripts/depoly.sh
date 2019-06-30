@@ -1,3 +1,2 @@
 echo "开始"
-npm install
-pm2 restart app
+pm2 restart ./service/app.js

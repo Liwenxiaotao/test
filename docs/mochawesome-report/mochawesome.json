@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2019-06-29T04:17:00.759Z",
-    "end": "2019-06-29T04:17:00.787Z",
-    "duration": 28,
+    "start": "2019-06-30T09:14:23.445Z",
+    "end": "2019-06-30T09:14:23.486Z",
+    "duration": 41,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c9177af7-d894-471e-8db9-29b4a4339027",
+      "uuid": "2df33c28-21e1-485b-bba4-1d7a811a52fa",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6b872bd1-798b-4bf0-a1ff-6dd6332b32b3",
+          "uuid": "e4780a10-df11-4b1c-a787-a29b0004d112",
           "title": "接口",
           "fullFile": "C:\\work\\web\\yideng\\test\\service\\router.spec.js",
           "file": "\\service\\router.spec.js",
@@ -38,29 +38,29 @@
               "title": "test接口",
               "fullTitle": "接口 test接口",
               "timedOut": false,
-              "duration": 21,
+              "duration": 23,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "axios.get('http://localhost:3000/test')\n  .then(function(res) {\n    if(res.data.data === 'hello world') {\n      done()\n    } else {\n      done(new Error('数据请求错误'))\n    }\n  })\n  .catch(function(error) {\n    done(error)\n  })",
+              "code": "request(app).get('/test')\n  .expect('Content-Type', /json/)\n  .expect(200)\n  .end(function(err, res) {\n    if (err) return done(err)\n    if (res.body.data === 'hello world') {\n      done()\n    } else {\n      done(new Error('接口数据错误'))\n    }\n  })",
               "err": {},
-              "uuid": "fadf0add-10ea-4335-9d00-ab1638fbbdaf",
-              "parentUUID": "6b872bd1-798b-4bf0-a1ff-6dd6332b32b3",
+              "uuid": "ba348c48-235c-4cf0-b9f9-fb00d279dfb5",
+              "parentUUID": "e4780a10-df11-4b1c-a787-a29b0004d112",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fadf0add-10ea-4335-9d00-ab1638fbbdaf"
+            "ba348c48-235c-4cf0-b9f9-fb00d279dfb5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21,
+          "duration": 23,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run unit && npm run e2e",
+    "test": "npm run unit && npm run e2e && npm run server",
     "unit": "karma start",
     "e2e": "node ./e2e/baidu.spec.js",
     "server": "node ./mochaRunner.js",
@@ -26,6 +26,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "mocha": "^6.1.4",
     "mochawesome": "^4.0.1",
-    "selenium-webdriver": "^4.0.0-alpha.3"
+    "selenium-webdriver": "^4.0.0-alpha.3",
+    "supertest": "^4.0.2"
   }
 }
